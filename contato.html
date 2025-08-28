@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="section_formularios">
+        <h1>Contato 💬</h1>
+        <p>Nos mande suas dúvidas, sugestões e reclamações, agradecemos o contato.</p><br><br>
+
+        <form>
+            <label for="name">Nome: </label>
+            <input type="text" name="nome" required placeholder="Digite seu nome"><br><br>
+            <label for="email">E-mail: </label>
+            <input type="email" required placeholder="Digite seu E-mail"><br><br>
+            <label for="telefone">Telefone: </label>
+            <input type="tel" required placeholder="Digite seu telefone"><br><br>
+            <label for="assunto">Assunto: </label>
+            <select name="assunto" id="assunto" required>
+                <option value="">--Escolha--</option>
+                <option value="duvida">Dúvidas</option>
+                <option value="sugestoes">Sugestões</option>
+                <option value="reclamacoes">Reclamações</option>
+            </select><br><br>
+            <label for="mensagem">Mensagem: </label><br>
+            <textarea name="mensagem" id="mensagem" rows="10" cols="60" required placeholder="Digite sua mensagem"></textarea><br>
+
+            <section id="sec_botoes">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+                <button type="button" onclick="window.location.href='index.html'">Voltar a página inicial</button>
+            </section>
+            
+        </form>
+    </section>
+    
+
+</body>
+
+</html>
