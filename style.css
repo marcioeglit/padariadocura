@@ -1,0 +1,706 @@
+/* ----------------------------- IMPORT DE FONTES ----------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* ----------------------------- ESTILO GLOBAL ----------------------------- */
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #F1D9B6;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(images/fundo.jpg);
+    background-repeat: repeat;
+    opacity: 0.08;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+
+/* ----------------------------- CABEÇALHO ----------------------------- */
+.cabecalho {
+    text-align: center;
+    background: linear-gradient(to left,#d96f32,#ff7829);
+    color: #F1D9B6;
+    text-shadow: #000 1px 1px 2px;
+    height: 170px;
+}
+
+#logo {
+    float: left;
+    margin: 10px 0 0 20px;
+    height: 150px;
+    width: 150px;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+/* ----------------------------- NAVEGAÇÃO ----------------------------- */
+#navegacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+nav {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    text-shadow: #666 1px 1px 2px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    color: #F8B259;
+    transform: scale(1.04);
+}
+
+/* ----------------------------- MAIN ----------------------------- */
+.secpai {
+    position: relative;
+    height: 430px;
+}
+
+#sec1 {
+    display: flex;
+    gap: 20px;
+}
+
+#sec1 .texto {
+    backdrop-filter: blur(5px);
+    margin-left: 100px;
+}
+
+#fachada {
+    width: 800px;
+    height: 500px;
+    margin: 0 100px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#boas_vindas {
+    
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* começa invisível */
+    transform: translateY(20px);
+    /* começa levemente deslocado */
+    animation: fadeIn 2s ease forwards;
+}
+
+#boas_vindas p {
+    border-radius: 20px;
+    background-color: #ffffff69;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    width: auto;
+}
+
+#boas_vindas input {
+    width: 300px;
+
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* volta à posição normal */
+    }
+}
+
+#calculadora {
+    border-radius: 10px;
+    width: 700px;
+    background-color: #ffffff27;
+    height: 250px;
+    padding: 20px;
+}
+
+#calculadora input {
+    width: 80px;
+}
+
+#calculadora p {
+    font-size: 18px;
+    background-color: #F8B259;
+    text-align: center;
+}
+
+#calculadora select {
+
+    width: 150px;
+
+}
+
+#carrinho_compra {
+    border-radius: 10px;
+    background-color: #ffffff27;
+    padding: 20px;
+}
+
+#totalCarrinho {
+    font-size: 33px;
+}
+
+.produto {
+    display: none;
+    /* esconde todas inicialmente */
+
+}
+
+#carrinho_calculadora_frete {
+
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+
+
+}
+
+
+#frete {
+
+    width: 400px;
+    border-radius: 10px;
+    background-color: #ffffff27;
+    padding: 20px;
+}
+
+
+#frete p {
+    font-size: 18px;
+    background-color: #F8B259;
+    text-align: center;
+}
+
+/* ----------------------------- TABELA ----------------------------- */
+table {
+    width: 80%;
+    margin: 20px 0;
+    background-color: #F8B259;
+    color: #000;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+th {
+    background-color: #D96F32;
+    color: #F1D9B6;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+td,
+th {
+    border: 2px solid #000;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+td:hover {
+    background-color: #D96F32;
+    color: #fff;
+}
+
+#tabela_horario {
+    width: 700px;
+    position: absolute;
+    right: 53%;
+}
+
+#frame_mapa {
+    position: absolute;
+    left: 55%;
+    width: 600px;
+    height: 425px;
+    border: 2px solid #D96F32;
+}
+
+/* ----------------------------- SEÇÃO DE MÍDIAS ----------------------------- */
+.sec2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagem_galeria {
+    width: 260px;
+    height: 260px;
+    border-radius: 12px;
+}
+
+#sec_imagens {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.imagem_galeria:hover {
+    scale: 1.04;
+}
+
+#sec_video {
+    display: flex;
+    justify-content: center;
+}
+
+/* ----------------------------- PRODUTOS ----------------------------- */
+#sec4 {
+    padding: 40px 20px;
+    background: #fff8f073;
+    text-align: center;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+#sec4 h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #D96F32;
+}
+
+#sec4 div {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#sec4 div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#sec4 h3 {
+    margin-bottom: 10px;
+    color: #e67e22;
+}
+
+#sec4 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sec4 li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+#sec4 li:last-child {
+    border-bottom: none;
+}
+
+/* ----------------------------- DESTAQUE ----------------------------- */
+.destaquep{
+    background-color: rgba(240, 248, 255, 0.295);
+    border-radius: 10px;
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* ----------------------------- FORMULÁRIOS ----------------------------- */
+.section_formularios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.section_formularios form {
+    width: 80%;
+    max-width: 600px;
+    background-color: #ffffff71;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+section h3 {
+    margin-bottom: 10px;
+    color: #ff6f61;
+    font-size: 18px;
+}
+
+.alinhamento {
+    text-align: center;
+    font-size: 25px;
+    color: #D96F32;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+.section_formularios input[type="checkbox"] {
+    border-color: #ff6f61;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+}
+
+/* Botões */
+button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e55b4f;
+}
+
+button[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+    margin-left: 10px;
+}
+
+button[type="reset"]:hover {
+    background-color: #aaa;
+}
+
+/* ----------------------------- COMENTARIOS ----------------------------- */
+#comentarios {
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+}
+
+#coment {
+    font-style: italic;
+    margin-left: 10px;
+    display: flex;
+    background-color: #ffffff8e;
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#coment:hover {
+    scale: 1.05;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/* ----------------------------- FOOTER ----------------------------- */
+footer {
+    display: flex;
+    text-align: center;
+    background-color: #D96F32;
+    color: #F1D9B6;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------------------------- BOTÕES FIXOS ----------------------------- */
+.botaowhatsapp {
+    height: 60px;
+    position: fixed;
+    bottom: 3%;
+    left: 96%;
+    background-color: #ffffff8a;
+    border-radius: 50%;
+}
+
+.botaowhatsapp:hover {
+    transform: scale(1.1);
+}
+
+#btn_voltar_top {
+    position: relative;
+    left: 90%;
+    background: none;
+    color: #e55b4f;
+}
+
+/* ===========================
+   ESTILOS RESPONSIVOS
+   =========================== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* Header e Navegação */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* Imagens responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #fachada {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  /* Seções em grid/column */
+  .sobre,
+  .comentarios,
+  .carrinho,
+  .login,
+  .cadastro {
+    padding: 15px;
+  }
+
+  /* Cardápio em grid flexível */
+  #cardapio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #cardapio > div {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  /* Tabela de horários */
+  #horarios table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #horarios th,
+  #horarios td {
+    padding: 8px;
+  }
+
+  /* Botão voltar ao topo */
+  #topo {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    gap: 5px;
+  }
+
+  #cardapio > div img {
+    max-height: 150px;
+  }
+
+  #horarios table {
+    font-size: 12px;
+  }
+}
+
+/* ========== RESPONSIVIDADE CELULAR ========== */
+@media (max-width: 768px) {
+  /* Ajuste geral */
+  body {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  /* Header e menu */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  nav li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* Blocos de cálculo (frete, desconto etc.) */
+  #calculos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #calculos > div {
+    width: 100%;
+  }
+
+  /* Tabelas (cardápio, horários) */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;  /* rolagem lateral se necessário */
+    border-collapse: collapse;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Horários e mapa em coluna */
+  #horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #horarios table {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  #horarios iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* Imagens responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #fachada {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Títulos menores */
+  h1, h2, h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  /* Botões menores */
+  button, input[type="submit"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Cardápio imagens menores */
+  #cardapio img {
+    max-height: 150px;
+  }
+}

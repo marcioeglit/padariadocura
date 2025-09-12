@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="section_formularios">
+        <h1>Cadrastro 📫</h1>
+        <p>Cadastre-se e receba nossa Newsletter</p><br><br>
+        <form id="cadastro">
+            <section>
+                <label>Nome: </label>
+                <input type="text" name="nome" required placeholder="Digite seu nome" id="nome"><br><br>
+                <label>E-mail: </label>
+                <input type="email" required placeholder="Digite seu E-mail" id="email"><br><br>
+                <label>Telefone: </label>
+                <input type="tel" required placeholder="Digite seu telefone" id="telefone"><br><br>
+                <label>Data de Nascimento: </label>
+                <input type="date" id="data_nascimento"><br><br>
+            </section>
+
+            <section>
+                <h3>Endereço</h3>
+                <label>Rua: </label>
+                <input type="text" required id="rua"><br><br>
+                <label>Nº: </label>
+                <input type="number" required id="numero"><br><br>
+                <label>Bairro: </label>
+                <input type="text" required id="bairro"><br><br>
+                <label>CEP: </label>
+                <input type="number" required id="cep"><br><br>
+            </section>
+
+            <h3 class="alinhamento">Produtos favoritos</h3>
+
+            <section class="sec_inputs">
+                <input type="checkbox" name="produtosfavoritos" id="paes" value="Pães">
+                <label for="paes">Pães</label>
+                <input type="checkbox" name="produtosfavoritos" id="bolos" value="Bolos">
+                <label for="bolos">Bolos</label>
+                <input type="checkbox" name="produtosfavoritos" id="doces" value="Doces">
+                <label for="doces">Doces</label>
+                <input type="checkbox" name="produtosfavoritos" id="salgados" value="Salgados">
+                <label for="salgados">Salgados</label>
+                <input type="checkbox" name="produtosfavoritos" id="bebidas" value="Bebidas">
+                <label for="bebidas">Bebidas</label>
+            </section>
+
+            <h3 class="alinhamento">Aceita receber promoções por e-mail?</h3>
+
+            <section class="sec_inputs">
+
+                <input type="radio" name="aceita" id="aceita" value="sim" required>
+                <label for="aceita">SIM</label>
+                <input type="radio" name="aceita" id="nao" value="nao" required>
+                <label for="aceita">NÃO</label><br><br>
+            </section>
+
+            <section id="sec_botoes">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+                <button type="button" onclick="window.location.href='index.html'">Voltar a página inicial</button>
+            </section>
+        </form>
+    </section>
+
+<script src="script-cadastro.js"></script>
+</body>
+
+</html>

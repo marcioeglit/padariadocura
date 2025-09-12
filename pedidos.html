@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="section_formularios">
+        <h1>Pedido 🛒</h1>
+        <p>Faça seu pedido e agende sua entrega.</p><br><br>
+        <form id="pedido">
+            <fieldset>
+                <legend class="alinhamento">Seus dados</legend>
+                <label>Nome: </label>
+                <input type="text" id="nome" required placeholder="Digite seu nome" required><br><br>
+                <label>E-mail: </label>
+                <input type="email" id="email" required placeholder="Digite seu E-mail" required><br><br>
+                <label>Telefone: </label>
+                <input type="tel" id="telefone" required placeholder="Digite seu telefone" required><br><br>
+                <label>Endereço: </label>
+                <input type="text" id="endereco" required placeholder="Digite seu endereço" required><br><br>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Detalhes do pedido</legend>
+                <label class="alinhamento">Produto</label><br>
+                <section class="sec_inputs">
+
+                    <input type="radio" name="tipo_produto" id="paes" value="paes" required>
+                    <label for="paes">🍞 Pães</label>
+                    <input type="radio" name="tipo_produto" id="bolos" value="bolos" required>
+                    <label for="bolos">🍰 Bolos</label>
+                    <input type="radio" name="tipo_produto" id="doces" value="doces" required>
+                    <label for="doces">🍩 Doces</label>
+
+
+                </section>
+                <p class="alinhamento">Sabor ou recheio</p>
+                <select name="sabor" id="sabor">
+                    <option required value="">--Selecione--</option>
+                    <option required value="chocolate" id="sabor">Chocolate</option>
+                    <option required value="milho" id="sabor">Milho</option>
+                    <option required value="cenoura" id="sabor">Cenoura</option>
+                </select>
+
+                <br><br>
+                <label class="alinhamento" for="tamanho">Tamanho</label><br>
+
+                <section class="sec_inputs">
+                    <input type="radio" name="tamanho" id="pequeno" value="pequeno" required>
+                    <label for="tamanho">Pequeno</label>
+                    <input type="radio" name="tamanho" id="medio" value="medio" required>
+                    <label for="tamanho">Médio</label>
+                    <input type="radio" name="tamanho" id="grande" value="grande" required>
+                    <label for="tamanho">Grande</label><br><br>
+                    <label for="dataentrega">Data de entrega</label><br>
+                    <input type="date" required id="data_entrega">
+                </section>
+
+
+            </fieldset><br>
+
+
+            <label for="observacao">Observações</label><br><br>
+            <textarea name="observacao" id="observacao" required rows="4" cols="45"
+                placeholder="Digite a sua observação"></textarea><br>
+            <label for="orcamento">Orçamento Maximo</label><br>
+            <input id="orcamento" type="number"><br><br>
+
+            <section id="sec_botoes">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+                <button type="button" onclick="window.location.href='index.html'">Voltar a página inicial</button>
+            </section>
+
+
+        </form>
+
+    </section>
+
+    <script src="script-pedidos.js"></script>
+
+
+</body>
+
+</html>

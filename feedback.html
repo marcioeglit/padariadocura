@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="section_formularios">
+        <h1>Feedback 📫</h1>
+        <p>Nos envie seu feedback</p><br><br>
+        <form id="feedback">
+            <label>Nome (opcional)</label>
+            <input type="text" placeholder="Seu nome" id="nome"><br><br>
+            <label>E-mail (opcional)</label>
+            <input type="email" placeholder="Seu e-mail" id="email"><br><br>
+            <label>Produto ou serviço</label>
+            <select name="produtoservico" id="produtoservico">
+                <option value="">--Selecione--</option>
+                <option value="paes">Pães</option>
+                <option value="bolos">Bolos</option>
+                <option value="doces">Doces</option>
+                <option value="servicos">Atendimento</option>
+            </select><br><br>
+
+            <label class="alinhamento">Avaliação</label>
+
+            <section class="sec_inputs">
+                <input type="radio" name="avaliacao" id="muitobom" value="muitobom" required>
+                <label for="avaliacao" id="muitobom">😄 Muito Bom</label>
+                <input type="radio" name="avaliacao" id="bom" value="bom" required>
+                <label for="avaliacao" id="bom">😀 Bom</label>
+                <input type="radio" name="avaliacao" id="satisfatorio" value="satisfatorio" required>
+                <label for="avaliacao" id="satisfatorio">🙂 Satisfatório</label>
+                <input type="radio" name="avaliacao" id="ruim" value="ruim" required>
+                <label for="avaliacao" id="ruim">🙁 Ruim</label>
+                <input type="radio" name="avaliacao" id="pessimo" value="pessimo" required>
+                <label for="avaliacao" id="pessimo">😠 Péssimo</label><br><br>
+            </section>
+
+            <section id="sec_botoes">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+                <button type="button" onclick="window.location.href='index.html'">Voltar a página inicial</button>
+            </section>
+
+        </form>
+    </section>
+
+
+
+</body>
+    <script src="script-feedback.js"></script>
+</html>
